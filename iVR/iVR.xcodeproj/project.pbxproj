@@ -19,6 +19,9 @@
 		8190D97D1D00C361002CB367 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8190D97A1D00C361002CB367 /* FBSDKCoreKit.framework */; };
 		8190D97E1D00C361002CB367 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8190D97B1D00C361002CB367 /* FBSDKLoginKit.framework */; };
 		8190D97F1D00C361002CB367 /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8190D97C1D00C361002CB367 /* FBSDKShareKit.framework */; };
+		8190D9811D00E417002CB367 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8190D9801D00E417002CB367 /* SignUpViewController.swift */; };
+		8190D9831D00E811002CB367 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8190D9821D00E811002CB367 /* Reachability.swift */; };
+		8190D9881D00E889002CB367 /* Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8190D9871D00E889002CB367 /* Validation.swift */; };
 		819978C01CFF415500622298 /* century-gothic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 819978BF1CFF415500622298 /* century-gothic.ttf */; };
 		819978C21CFF420C00622298 /* century-gothic-bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 819978C11CFF420C00622298 /* century-gothic-bold.ttf */; };
 		819978C41CFF45A500622298 /* good times rg.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 819978C31CFF45A500622298 /* good times rg.ttf */; };
@@ -66,6 +69,9 @@
 		8190D97A1D00C361002CB367 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKCoreKit.framework; path = ../../../../Documents/FacebookSDK/FBSDKCoreKit.framework; sourceTree = "<group>"; };
 		8190D97B1D00C361002CB367 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKLoginKit.framework; path = ../../../../Documents/FacebookSDK/FBSDKLoginKit.framework; sourceTree = "<group>"; };
 		8190D97C1D00C361002CB367 /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKShareKit.framework; path = ../../../../Documents/FacebookSDK/FBSDKShareKit.framework; sourceTree = "<group>"; };
+		8190D9801D00E417002CB367 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		8190D9821D00E811002CB367 /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
+		8190D9871D00E889002CB367 /* Validation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Validation.swift; sourceTree = "<group>"; };
 		819978BF1CFF415500622298 /* century-gothic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "century-gothic.ttf"; sourceTree = "<group>"; };
 		819978C11CFF420C00622298 /* century-gothic-bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "century-gothic-bold.ttf"; sourceTree = "<group>"; };
 		819978C31CFF45A500622298 /* good times rg.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "good times rg.ttf"; sourceTree = "<group>"; };
@@ -146,15 +152,13 @@
 		815EAF4C1CF90A80007FEFEF /* iVR */ = {
 			isa = PBXGroup;
 			children = (
+				8190D9841D00E819002CB367 /* Validation */,
 				819978B61CFF3D5900622298 /* Fonts */,
 				815EAF4D1CF90A80007FEFEF /* AppDelegate.swift */,
 				815EAF4F1CF90A80007FEFEF /* ViewController.swift */,
 				815EAF511CF90A80007FEFEF /* Main.storyboard */,
-				815EAF541CF90A80007FEFEF /* Assets.xcassets */,
-				815EAF561CF90A80007FEFEF /* LaunchScreen.storyboard */,
-				815EAF591CF90A80007FEFEF /* Info.plist */,
-				8190D9781D00C1D6002CB367 /* GoogleService-Info.plist */,
-				819978C51CFF4BBE00622298 /* LoginViewController.swift */,
+				8190D9861D00E83E002CB367 /* Assets */,
+				8190D9851D00E823002CB367 /* Login/Signup views */,
 			);
 			path = iVR;
 			sourceTree = "<group>";
@@ -175,6 +179,35 @@
 				815EAF6F1CF90A80007FEFEF /* Info.plist */,
 			);
 			path = iVRUITests;
+			sourceTree = "<group>";
+		};
+		8190D9841D00E819002CB367 /* Validation */ = {
+			isa = PBXGroup;
+			children = (
+				8190D9871D00E889002CB367 /* Validation.swift */,
+				8190D9821D00E811002CB367 /* Reachability.swift */,
+			);
+			name = Validation;
+			sourceTree = "<group>";
+		};
+		8190D9851D00E823002CB367 /* Login/Signup views */ = {
+			isa = PBXGroup;
+			children = (
+				819978C51CFF4BBE00622298 /* LoginViewController.swift */,
+				8190D9801D00E417002CB367 /* SignUpViewController.swift */,
+			);
+			name = "Login/Signup views";
+			sourceTree = "<group>";
+		};
+		8190D9861D00E83E002CB367 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				815EAF541CF90A80007FEFEF /* Assets.xcassets */,
+				815EAF561CF90A80007FEFEF /* LaunchScreen.storyboard */,
+				815EAF591CF90A80007FEFEF /* Info.plist */,
+				8190D9781D00C1D6002CB367 /* GoogleService-Info.plist */,
+			);
+			name = Assets;
 			sourceTree = "<group>";
 		};
 		819978B61CFF3D5900622298 /* Fonts */ = {
@@ -469,6 +502,9 @@
 			files = (
 				819978C61CFF4BBE00622298 /* LoginViewController.swift in Sources */,
 				815EAF501CF90A80007FEFEF /* ViewController.swift in Sources */,
+				8190D9811D00E417002CB367 /* SignUpViewController.swift in Sources */,
+				8190D9831D00E811002CB367 /* Reachability.swift in Sources */,
+				8190D9881D00E889002CB367 /* Validation.swift in Sources */,
 				815EAF4E1CF90A80007FEFEF /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

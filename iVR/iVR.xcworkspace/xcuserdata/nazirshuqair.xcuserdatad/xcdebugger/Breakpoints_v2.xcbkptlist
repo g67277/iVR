@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "iVR/LoginViewController.swift"
-            timestampString = "486592510.53413"
+            timestampString = "486600211.911825"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "48"
-            endingLineNumber = "48"
+            startingLineNumber = "70"
+            endingLineNumber = "70"
             landmarkName = "firebaseAuth(_:)"
             landmarkType = "5">
             <Locations>
@@ -58,12 +58,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "iVR/LoginViewController.swift"
-            timestampString = "486592510.53413"
+            timestampString = "486600211.911825"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "69"
-            endingLineNumber = "69"
-            landmarkName = "loginButton(_:didCompleteWithResult:error:)"
+            startingLineNumber = "72"
+            endingLineNumber = "72"
+            landmarkName = "firebaseAuth(_:)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -74,12 +74,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "iVR/LoginViewController.swift"
-            timestampString = "486592545.43789"
+            timestampString = "486600211.911825"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "50"
-            endingLineNumber = "50"
-            landmarkName = "firebaseAuth(_:)"
+            startingLineNumber = "92"
+            endingLineNumber = "92"
+            landmarkName = "loginButton(_:didCompleteWithResult:error:)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
