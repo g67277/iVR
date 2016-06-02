@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7A38F5D5F693DD21C79D36B8 /* Pods_iVRUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD2D2967125AAFD28C02FB6F /* Pods_iVRUITests.framework */; };
 		815EAF4E1CF90A80007FEFEF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 815EAF4D1CF90A80007FEFEF /* AppDelegate.swift */; };
 		815EAF501CF90A80007FEFEF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 815EAF4F1CF90A80007FEFEF /* ViewController.swift */; };
 		815EAF531CF90A80007FEFEF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 815EAF511CF90A80007FEFEF /* Main.storyboard */; };
@@ -14,10 +15,16 @@
 		815EAF581CF90A80007FEFEF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 815EAF561CF90A80007FEFEF /* LaunchScreen.storyboard */; };
 		815EAF631CF90A80007FEFEF /* iVRTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 815EAF621CF90A80007FEFEF /* iVRTests.swift */; };
 		815EAF6E1CF90A80007FEFEF /* iVRUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 815EAF6D1CF90A80007FEFEF /* iVRUITests.swift */; };
+		8190D9791D00C1D6002CB367 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8190D9781D00C1D6002CB367 /* GoogleService-Info.plist */; };
+		8190D97D1D00C361002CB367 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8190D97A1D00C361002CB367 /* FBSDKCoreKit.framework */; };
+		8190D97E1D00C361002CB367 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8190D97B1D00C361002CB367 /* FBSDKLoginKit.framework */; };
+		8190D97F1D00C361002CB367 /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8190D97C1D00C361002CB367 /* FBSDKShareKit.framework */; };
 		819978C01CFF415500622298 /* century-gothic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 819978BF1CFF415500622298 /* century-gothic.ttf */; };
 		819978C21CFF420C00622298 /* century-gothic-bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 819978C11CFF420C00622298 /* century-gothic-bold.ttf */; };
 		819978C41CFF45A500622298 /* good times rg.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 819978C31CFF45A500622298 /* good times rg.ttf */; };
 		819978C61CFF4BBE00622298 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 819978C51CFF4BBE00622298 /* LoginViewController.swift */; };
+		EAB0E37B27565D284337826E /* Pods_iVRTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01561A6C235F969C13C34A65 /* Pods_iVRTests.framework */; };
+		F83947B61839D962586452C8 /* Pods_iVR.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE7CE21A49653CD4CD601899 /* Pods_iVR.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +45,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		01561A6C235F969C13C34A65 /* Pods_iVRTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iVRTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5591560B4650C946078AF1C3 /* Pods-iVRUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iVRUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iVRUITests/Pods-iVRUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		6090BA4E571932282D3B7C08 /* Pods-iVR.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iVR.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iVR/Pods-iVR.debug.xcconfig"; sourceTree = "<group>"; };
+		805DBF85AEC04CDF3F845FCF /* Pods-iVRUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iVRUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-iVRUITests/Pods-iVRUITests.release.xcconfig"; sourceTree = "<group>"; };
 		815EAF4A1CF90A80007FEFEF /* iVR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iVR.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		815EAF4D1CF90A80007FEFEF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		815EAF4F1CF90A80007FEFEF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -51,10 +62,19 @@
 		815EAF691CF90A80007FEFEF /* iVRUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iVRUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		815EAF6D1CF90A80007FEFEF /* iVRUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iVRUITests.swift; sourceTree = "<group>"; };
 		815EAF6F1CF90A80007FEFEF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8190D9781D00C1D6002CB367 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		8190D97A1D00C361002CB367 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKCoreKit.framework; path = ../../../../Documents/FacebookSDK/FBSDKCoreKit.framework; sourceTree = "<group>"; };
+		8190D97B1D00C361002CB367 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKLoginKit.framework; path = ../../../../Documents/FacebookSDK/FBSDKLoginKit.framework; sourceTree = "<group>"; };
+		8190D97C1D00C361002CB367 /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKShareKit.framework; path = ../../../../Documents/FacebookSDK/FBSDKShareKit.framework; sourceTree = "<group>"; };
 		819978BF1CFF415500622298 /* century-gothic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "century-gothic.ttf"; sourceTree = "<group>"; };
 		819978C11CFF420C00622298 /* century-gothic-bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "century-gothic-bold.ttf"; sourceTree = "<group>"; };
 		819978C31CFF45A500622298 /* good times rg.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "good times rg.ttf"; sourceTree = "<group>"; };
 		819978C51CFF4BBE00622298 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		8D6D49ED8F55B0CF7BD343D7 /* Pods-iVR.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iVR.release.xcconfig"; path = "Pods/Target Support Files/Pods-iVR/Pods-iVR.release.xcconfig"; sourceTree = "<group>"; };
+		A286A1695D628A42CC0A80F5 /* Pods-iVRTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iVRTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iVRTests/Pods-iVRTests.debug.xcconfig"; sourceTree = "<group>"; };
+		C609B9D15A93799969C9B5C2 /* Pods-iVRTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iVRTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-iVRTests/Pods-iVRTests.release.xcconfig"; sourceTree = "<group>"; };
+		DD2D2967125AAFD28C02FB6F /* Pods_iVRUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iVRUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FE7CE21A49653CD4CD601899 /* Pods_iVR.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iVR.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +82,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8190D97F1D00C361002CB367 /* FBSDKShareKit.framework in Frameworks */,
+				F83947B61839D962586452C8 /* Pods_iVR.framework in Frameworks */,
+				8190D97D1D00C361002CB367 /* FBSDKCoreKit.framework in Frameworks */,
+				8190D97E1D00C361002CB367 /* FBSDKLoginKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -69,6 +93,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EAB0E37B27565D284337826E /* Pods_iVRTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,12 +101,26 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7A38F5D5F693DD21C79D36B8 /* Pods_iVRUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3E23477D52AFE62F648473EC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8190D97A1D00C361002CB367 /* FBSDKCoreKit.framework */,
+				8190D97B1D00C361002CB367 /* FBSDKLoginKit.framework */,
+				8190D97C1D00C361002CB367 /* FBSDKShareKit.framework */,
+				FE7CE21A49653CD4CD601899 /* Pods_iVR.framework */,
+				01561A6C235F969C13C34A65 /* Pods_iVRTests.framework */,
+				DD2D2967125AAFD28C02FB6F /* Pods_iVRUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		815EAF411CF90A80007FEFEF = {
 			isa = PBXGroup;
 			children = (
@@ -89,6 +128,8 @@
 				815EAF611CF90A80007FEFEF /* iVRTests */,
 				815EAF6C1CF90A80007FEFEF /* iVRUITests */,
 				815EAF4B1CF90A80007FEFEF /* Products */,
+				D1BA5A40C36EA854818FA0C2 /* Pods */,
+				3E23477D52AFE62F648473EC /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -112,6 +153,7 @@
 				815EAF541CF90A80007FEFEF /* Assets.xcassets */,
 				815EAF561CF90A80007FEFEF /* LaunchScreen.storyboard */,
 				815EAF591CF90A80007FEFEF /* Info.plist */,
+				8190D9781D00C1D6002CB367 /* GoogleService-Info.plist */,
 				819978C51CFF4BBE00622298 /* LoginViewController.swift */,
 			);
 			path = iVR;
@@ -145,6 +187,19 @@
 			name = Fonts;
 			sourceTree = "<group>";
 		};
+		D1BA5A40C36EA854818FA0C2 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6090BA4E571932282D3B7C08 /* Pods-iVR.debug.xcconfig */,
+				8D6D49ED8F55B0CF7BD343D7 /* Pods-iVR.release.xcconfig */,
+				A286A1695D628A42CC0A80F5 /* Pods-iVRTests.debug.xcconfig */,
+				C609B9D15A93799969C9B5C2 /* Pods-iVRTests.release.xcconfig */,
+				5591560B4650C946078AF1C3 /* Pods-iVRUITests.debug.xcconfig */,
+				805DBF85AEC04CDF3F845FCF /* Pods-iVRUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -152,9 +207,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 815EAF721CF90A80007FEFEF /* Build configuration list for PBXNativeTarget "iVR" */;
 			buildPhases = (
+				597981201584F6FFC0CA0722 /* 📦 Check Pods Manifest.lock */,
 				815EAF461CF90A80007FEFEF /* Sources */,
 				815EAF471CF90A80007FEFEF /* Frameworks */,
 				815EAF481CF90A80007FEFEF /* Resources */,
+				29E4C5DF8549B5D01AEF9E64 /* 📦 Embed Pods Frameworks */,
+				9A0BDE750C0533F548895F94 /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -169,9 +227,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 815EAF751CF90A80007FEFEF /* Build configuration list for PBXNativeTarget "iVRTests" */;
 			buildPhases = (
+				C94BD9C5503A300ACA2AB429 /* 📦 Check Pods Manifest.lock */,
 				815EAF5A1CF90A80007FEFEF /* Sources */,
 				815EAF5B1CF90A80007FEFEF /* Frameworks */,
 				815EAF5C1CF90A80007FEFEF /* Resources */,
+				9715224E03F55B0A5FF8FED0 /* 📦 Embed Pods Frameworks */,
+				F6D01F94710CBF713DEF0FEF /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -187,9 +248,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 815EAF781CF90A80007FEFEF /* Build configuration list for PBXNativeTarget "iVRUITests" */;
 			buildPhases = (
+				EADB7983A9BCEC07DCFC3E10 /* 📦 Check Pods Manifest.lock */,
 				815EAF651CF90A80007FEFEF /* Sources */,
 				815EAF661CF90A80007FEFEF /* Frameworks */,
 				815EAF671CF90A80007FEFEF /* Resources */,
+				7C4523955534094EA2CFFBB3 /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -256,6 +319,7 @@
 				815EAF531CF90A80007FEFEF /* Main.storyboard in Resources */,
 				819978C01CFF415500622298 /* century-gothic.ttf in Resources */,
 				819978C41CFF45A500622298 /* good times rg.ttf in Resources */,
+				8190D9791D00C1D6002CB367 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -274,6 +338,129 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		29E4C5DF8549B5D01AEF9E64 /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-iVR/Pods-iVR-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		597981201584F6FFC0CA0722 /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		7C4523955534094EA2CFFBB3 /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-iVRUITests/Pods-iVRUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9715224E03F55B0A5FF8FED0 /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-iVRTests/Pods-iVRTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9A0BDE750C0533F548895F94 /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-iVR/Pods-iVR-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C94BD9C5503A300ACA2AB429 /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		EADB7983A9BCEC07DCFC3E10 /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		F6D01F94710CBF713DEF0FEF /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-iVRTests/Pods-iVRTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		815EAF461CF90A80007FEFEF /* Sources */ = {
@@ -422,11 +609,21 @@
 		};
 		815EAF731CF90A80007FEFEF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6090BA4E571932282D3B7C08 /* Pods-iVR.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_ROOT}/FirebaseAnalytics/Frameworks\"",
+					"\"${PODS_ROOT}/FirebaseInstanceID/Frameworks\"",
+					"\"${PODS_ROOT}/GoogleInterchangeUtilities/Frameworks\"",
+					"\"${PODS_ROOT}/GoogleSymbolUtilities/Frameworks\"",
+					"\"${PODS_ROOT}/GoogleUtilities/Frameworks\"",
+					/Users/nazirshuqair/Documents/FacebookSDK,
+				);
 				INFOPLIST_FILE = iVR/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.iVR.iVR;
@@ -437,11 +634,21 @@
 		};
 		815EAF741CF90A80007FEFEF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8D6D49ED8F55B0CF7BD343D7 /* Pods-iVR.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_ROOT}/FirebaseAnalytics/Frameworks\"",
+					"\"${PODS_ROOT}/FirebaseInstanceID/Frameworks\"",
+					"\"${PODS_ROOT}/GoogleInterchangeUtilities/Frameworks\"",
+					"\"${PODS_ROOT}/GoogleSymbolUtilities/Frameworks\"",
+					"\"${PODS_ROOT}/GoogleUtilities/Frameworks\"",
+					/Users/nazirshuqair/Documents/FacebookSDK,
+				);
 				INFOPLIST_FILE = iVR/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.iVR.iVR;
@@ -452,6 +659,7 @@
 		};
 		815EAF761CF90A80007FEFEF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A286A1695D628A42CC0A80F5 /* Pods-iVRTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = iVRTests/Info.plist;
@@ -464,6 +672,7 @@
 		};
 		815EAF771CF90A80007FEFEF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C609B9D15A93799969C9B5C2 /* Pods-iVRTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = iVRTests/Info.plist;
@@ -476,6 +685,7 @@
 		};
 		815EAF791CF90A80007FEFEF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5591560B4650C946078AF1C3 /* Pods-iVRUITests.debug.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = iVRUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -487,6 +697,7 @@
 		};
 		815EAF7A1CF90A80007FEFEF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 805DBF85AEC04CDF3F845FCF /* Pods-iVRUITests.release.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = iVRUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";

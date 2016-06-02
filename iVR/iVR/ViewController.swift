@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import FirebaseAuth
+import FBSDKLoginKit
 
 class ViewController: UIViewController {
 
@@ -21,5 +23,22 @@ class ViewController: UIViewController {
     }
 
 
+    // This will be moved to the profile page**
+    @IBAction func logout(sender: AnyObject) {
+        
+        let loginManager = FBSDKLoginManager()
+        loginManager.logOut()
+        try! FIRAuth.auth()!.signOut()
+        logoutAccepted()
+    }
+    
+    private func logoutAccepted(){
+        //This will change once paging is implemented**
+        let loginPage = self.storyboard?.instantiateViewControllerWithIdentifier("LoginViewController") as! LoginViewController
+        
+        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        
+        appDelegate.window?.rootViewController = loginPage
+    }
 }
 

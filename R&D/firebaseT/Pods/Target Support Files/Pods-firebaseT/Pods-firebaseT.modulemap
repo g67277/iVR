@@ -1,0 +1,6 @@
+framework module Pods_firebaseT {
+  umbrella header "Pods-firebaseT-umbrella.h"
+
+  export *
+  module * { export * }
+}
