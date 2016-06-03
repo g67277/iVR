@@ -168,7 +168,7 @@
                                                     <constraint firstAttribute="height" constant="30" id="YZY-5K-ClY"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" name="CenturyGothic" family="Century Gothic" pointSize="17"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="emailAddress"/>
                                                 <variation key="default">
                                                     <mask key="constraints">
                                                         <exclude reference="YZY-5K-ClY"/>
@@ -393,6 +393,9 @@
                                                 <include reference="r74-62-d3U"/>
                                             </mask>
                                         </variation>
+                                        <connections>
+                                            <action selector="logInBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yaP-VN-AsY"/>
+                                        </connections>
                                     </button>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="b3P-gP-qua" userLabel="Border">
                                         <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
@@ -443,7 +446,7 @@
                                             </constraint>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="GoodTimesRg-Regular" family="Good Times" pointSize="14"/>
-                                        <state key="normal" title="Log in with Twitter">
+                                        <state key="normal" title="Log in with Google">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <variation key="default">
@@ -716,9 +719,9 @@
                         </variation>
                     </view>
                     <connections>
-                        <outlet property="emailTF" destination="Wsy-gH-d7M" id="vv5-oD-wVu"/>
+                        <outlet property="emailField" destination="Wsy-gH-d7M" id="yKt-rl-Um6"/>
                         <outlet property="fbLoginBtn" destination="6dw-tw-b0A" id="PES-Mn-eqe"/>
-                        <outlet property="passTF" destination="N28-di-eVX" id="8gC-no-p0e"/>
+                        <outlet property="passField" destination="N28-di-eVX" id="DeE-x9-aSP"/>
                         <outlet property="signinView" destination="ani-Ud-L86" id="pgD-lK-3zd"/>
                     </connections>
                 </viewController>
@@ -778,7 +781,7 @@
         <!--Signup View Controller-->
         <scene sceneID="Chg-Ev-pMD">
             <objects>
-                <viewController storyboardIdentifier="SignUpViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="mRT-e2-RKS" userLabel="Signup View Controller" customClass="SignUpViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SignUpViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="mRT-e2-RKS" userLabel="Signup View Controller" customClass="SignUpViewController" customModule="iVR" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="6hr-AM-OnP"/>
                         <viewControllerLayoutGuide type="bottom" id="ZOd-Jr-NL1"/>
@@ -1260,6 +1263,9 @@
                                                 <include reference="WKV-nn-hrX"/>
                                             </mask>
                                         </variation>
+                                        <connections>
+                                            <action selector="signUpBtn:" destination="mRT-e2-RKS" eventType="touchUpInside" id="Qvc-EQ-A1R"/>
+                                        </connections>
                                     </button>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TEC-1e-JkS" userLabel="Border">
                                         <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
@@ -1497,6 +1503,11 @@
                             </mask>
                         </variation>
                     </view>
+                    <connections>
+                        <outlet property="emailField" destination="G7R-8T-vQk" id="A9i-76-Cq6"/>
+                        <outlet property="nameField" destination="rdk-iY-IXx" id="0ix-0J-GRk"/>
+                        <outlet property="passField" destination="4nx-UR-5hK" id="I35-tC-D5X"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7Qe-hH-NXi" sceneMemberID="firstResponder"/>
                 <exit id="wSY-GA-NFW" userLabel="Exit" sceneMemberID="exit"/>

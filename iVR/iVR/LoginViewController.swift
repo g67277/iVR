@@ -13,17 +13,20 @@ import FBSDKLoginKit
 
 class LoginViewController: UIViewController, FBSDKLoginButtonDelegate {
     
+    let CLASSID = "LoginViewController"
+
+    
     @IBOutlet weak var signinView: UIView!
     // Manual Login
-    @IBOutlet weak var emailTF: UITextField!
-    @IBOutlet weak var passTF: UITextField!
+    @IBOutlet weak var emailField: UITextField!
+    @IBOutlet weak var passField: UITextField!
     
     // Facebook button
     @IBOutlet weak var fbLoginBtn: FBSDKLoginButton!
     
     // Class declerations
     var validation = Validation()
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -64,7 +67,7 @@ class LoginViewController: UIViewController, FBSDKLoginButtonDelegate {
         }
     }
     
-    // Main function that takes in credentials from all types of logins and does the final sign in (might need to be modified if the credientials are different from different types
+    // Final firebase methods that take in credentials and logs users in
     private func firebaseAuth(credentials: FIRAuthCredential){
         
         FIRAuth.auth()?.signInWithCredential(credentials) { (user, error) in
@@ -72,33 +75,58 @@ class LoginViewController: UIViewController, FBSDKLoginButtonDelegate {
                 print("\(user?.displayName) has been logged in")
                 self.loginAccepted()
             }else{
-                print(error?.localizedDescription)
+                print("\(self.CLASSID):   \(error?.localizedDescription)")
             }
         }
     }
     
+    private func firebaseEmailAuth(){
+        
+        if Reachability.isConnectedToNetwork(){
+            FIRAuth.auth()?.signInWithEmail(emailField.text!, password: passField.text!) { (user, error) in
+                if error != nil {
+                    print("\(self.CLASSID):   \(error?.localizedDescription)")
+                }else{
+                    print("\(user?.displayName) has been logged in")
+                    self.loginAccepted()                }
+            }
+        }else{
+            validation.displayAlert(type: "offline")
+        }
+    }
+    
+    // Email & Password login methods ----------------------------------------------------------------------
+    
+    @IBAction func logInBtn(sender: AnyObject) {
+        firebaseEmailAuth()
+    }
+    
+    //------------------------------------------------------------------------------------------------------
+
     
     // Facebook Login methods ------------------------------------------------------------------------------
     // This is invoked when facebook authenticates
     internal func loginButton(loginButton: FBSDKLoginButton!, didCompleteWithResult result: FBSDKLoginManagerLoginResult!, error: NSError!){
         
         if error != nil {
-            print(error.localizedDescription)
+            print("\(self.CLASSID):   \(error?.localizedDescription)")
             return
         }
         // Checks if the email permission was granted, if not, an account can not be created and an alert is sent out
         
-         if result.token != nil{
-           if result.grantedPermissions.contains("email"){
-                let credential = FIRFacebookAuthProvider.credentialWithAccessToken(FBSDKAccessToken.currentAccessToken().tokenString)
-                self.firebaseAuth(credential)
+        if !Reachability.isConnectedToNetwork(){
+            validation.displayAlert(type: "offline")
+        }else{
+            if result.token != nil{
+                if result.grantedPermissions.contains("email"){
+                    let credential = FIRFacebookAuthProvider.credentialWithAccessToken(FBSDKAccessToken.currentAccessToken().tokenString)
+                    self.firebaseAuth(credential)
+                }else{
+                    let loginManager = FBSDKLoginManager()
+                    loginManager.logOut()
+                    validation.displayAlert("Signup Failed", message: "We need your email to create your unique account.  Please try again")
+                }
             }
-         }else if !Reachability.isConnectedToNetwork(){
-            validation.displayAlert("Offline", message: "You're currently offline, please try again when connected")
-         }else{
-            let loginManager = FBSDKLoginManager()
-            loginManager.logOut()
-            validation.displayAlert("Signup Failed", message: "We need your email to create your unique account.  Please try again")
         }
     }
     

@@ -52,15 +52,34 @@ public class Validation {
         
     }
     
-     func displayAlert(title: String, message: String){
+    func displayAlert( title: String = "", message: String = "", type: String = ""){
         
-        //Deprectated, will need to find a better way
-        let alertView:UIAlertView = UIAlertView()
-        alertView.title = title
-        alertView.message = message
-        alertView.delegate = self
-        alertView.addButtonWithTitle("OK")
-        alertView.show()
+        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        var mTitle = title
+        var mMessage = message
+        
+        switch type {
+        case "offline": // Network error
+            mTitle = "Offline"
+            mMessage = "You're currently offline, please try again when connected"
+        default: break
+            
+        }
+        
+        let alert = UIAlertController(title: mTitle, message: mMessage, preferredStyle: UIAlertControllerStyle.Alert)
+        alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default, handler: nil))
+        appDelegate.window?.rootViewController!.presentViewController(alert, animated: true, completion: nil)
+        
     }
+    
+//     func displayAlert(title: String, message: String){
+//        
+//        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+//        
+//        let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertControllerStyle.Alert)
+//        alert.addAction(UIAlertAction(title: "Click", style: UIAlertActionStyle.Default, handler: nil))
+//        appDelegate.window?.rootViewController!.presentViewController(alert, animated: true, completion: nil)
+//
+//    }
     
 }

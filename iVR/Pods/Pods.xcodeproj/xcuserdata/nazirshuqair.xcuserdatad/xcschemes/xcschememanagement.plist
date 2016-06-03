@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>IQKeyboardManagerSwift.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-iVR.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -27,12 +32,17 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>745F9A78616905D1196E03136195E0F7</key>
+		<key>1520003FEBEC114D6C84F832AFEDB994</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>B19F73CB6CB9303AC236050E61F3A229</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>D8267907D7A3D20F486C5E848D1A7D14</key>
 		<dict>
 			<key>primary</key>
 			<true/>

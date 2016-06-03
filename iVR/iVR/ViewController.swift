@@ -26,9 +26,14 @@ class ViewController: UIViewController {
     // This will be moved to the profile page**
     @IBAction func logout(sender: AnyObject) {
         
+        // Logout code for Facebook
         let loginManager = FBSDKLoginManager()
         loginManager.logOut()
+        
+        // Logout code for firebase
         try! FIRAuth.auth()!.signOut()
+        
+        
         logoutAccepted()
     }
     

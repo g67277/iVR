@@ -8,6 +8,7 @@ target 'iVR' do
   # Pods for iVR
 pod 'Firebase'
 pod 'Firebase/Auth'
+pod 'IQKeyboardManagerSwift'
 
   target 'iVRTests' do
     inherit! :search_paths
