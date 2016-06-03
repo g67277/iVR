@@ -9,6 +9,7 @@
 import UIKit
 import FirebaseAuth
 import FBSDKLoginKit
+import GoogleSignIn
 
 class ViewController: UIViewController {
 
@@ -29,6 +30,9 @@ class ViewController: UIViewController {
         // Logout code for Facebook
         let loginManager = FBSDKLoginManager()
         loginManager.logOut()
+        
+        // Logout code for Google
+        GIDSignIn.sharedInstance().signOut()
         
         // Logout code for firebase
         try! FIRAuth.auth()!.signOut()

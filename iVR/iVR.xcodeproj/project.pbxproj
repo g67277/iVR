@@ -22,6 +22,7 @@
 		8190D9811D00E417002CB367 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8190D9801D00E417002CB367 /* SignUpViewController.swift */; };
 		8190D9831D00E811002CB367 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8190D9821D00E811002CB367 /* Reachability.swift */; };
 		8190D9881D00E889002CB367 /* Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8190D9871D00E889002CB367 /* Validation.swift */; };
+		8190D98B1D01F3BB002CB367 /* ResetPassViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8190D98A1D01F3BB002CB367 /* ResetPassViewController.swift */; };
 		819978C01CFF415500622298 /* century-gothic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 819978BF1CFF415500622298 /* century-gothic.ttf */; };
 		819978C21CFF420C00622298 /* century-gothic-bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 819978C11CFF420C00622298 /* century-gothic-bold.ttf */; };
 		819978C41CFF45A500622298 /* good times rg.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 819978C31CFF45A500622298 /* good times rg.ttf */; };
@@ -72,6 +73,8 @@
 		8190D9801D00E417002CB367 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		8190D9821D00E811002CB367 /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 		8190D9871D00E889002CB367 /* Validation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Validation.swift; sourceTree = "<group>"; };
+		8190D9891D01D1E8002CB367 /* iVR-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "iVR-Bridging-Header.h"; sourceTree = "<group>"; };
+		8190D98A1D01F3BB002CB367 /* ResetPassViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResetPassViewController.swift; sourceTree = "<group>"; };
 		819978BF1CFF415500622298 /* century-gothic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "century-gothic.ttf"; sourceTree = "<group>"; };
 		819978C11CFF420C00622298 /* century-gothic-bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "century-gothic-bold.ttf"; sourceTree = "<group>"; };
 		819978C31CFF45A500622298 /* good times rg.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "good times rg.ttf"; sourceTree = "<group>"; };
@@ -159,6 +162,7 @@
 				815EAF511CF90A80007FEFEF /* Main.storyboard */,
 				8190D9861D00E83E002CB367 /* Assets */,
 				8190D9851D00E823002CB367 /* Login/Signup views */,
+				8190D9891D01D1E8002CB367 /* iVR-Bridging-Header.h */,
 			);
 			path = iVR;
 			sourceTree = "<group>";
@@ -195,6 +199,7 @@
 			children = (
 				819978C51CFF4BBE00622298 /* LoginViewController.swift */,
 				8190D9801D00E417002CB367 /* SignUpViewController.swift */,
+				8190D98A1D01F3BB002CB367 /* ResetPassViewController.swift */,
 			);
 			name = "Login/Signup views";
 			sourceTree = "<group>";
@@ -505,6 +510,7 @@
 				8190D9811D00E417002CB367 /* SignUpViewController.swift in Sources */,
 				8190D9831D00E811002CB367 /* Reachability.swift in Sources */,
 				8190D9881D00E889002CB367 /* Validation.swift in Sources */,
+				8190D98B1D01F3BB002CB367 /* ResetPassViewController.swift in Sources */,
 				815EAF4E1CF90A80007FEFEF /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

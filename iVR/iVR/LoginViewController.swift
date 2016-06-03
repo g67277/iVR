@@ -10,8 +10,9 @@ import UIKit
 import FirebaseAuth
 import FBSDKCoreKit
 import FBSDKLoginKit
+import GoogleSignIn
 
-class LoginViewController: UIViewController, FBSDKLoginButtonDelegate {
+class LoginViewController: UIViewController, FBSDKLoginButtonDelegate, GIDSignInUIDelegate, GIDSignInDelegate {
     
     let CLASSID = "LoginViewController"
 
@@ -35,6 +36,11 @@ class LoginViewController: UIViewController, FBSDKLoginButtonDelegate {
         // Facebook button elements
         fbLoginBtn.readPermissions = ["public_profile", "email", "user_friends"]
         fbLoginBtn.delegate = self
+        
+        // Google elements
+        GIDSignIn.sharedInstance().delegate = self
+        GIDSignIn.sharedInstance().uiDelegate = self
+
         
         enterAnimation()
     }
@@ -83,15 +89,24 @@ class LoginViewController: UIViewController, FBSDKLoginButtonDelegate {
     private func firebaseEmailAuth(){
         
         if Reachability.isConnectedToNetwork(){
-            FIRAuth.auth()?.signInWithEmail(emailField.text!, password: passField.text!) { (user, error) in
-                if error != nil {
-                    print("\(self.CLASSID):   \(error?.localizedDescription)")
-                }else{
-                    print("\(user?.displayName) has been logged in")
-                    self.loginAccepted()                }
+            if validation.validateEmail(emailField.text!){
+                FIRAuth.auth()?.signInWithEmail(emailField.text!, password: passField.text!) { (user, error) in
+                    if error != nil {
+                        print("\(self.CLASSID):   \(error?.localizedDescription)")
+                        print("code: \(error!.code)")
+                        if error!.code == 17011 {
+                            self.validation.displayAlert(type: "does_not_exist", completion: {result in})
+                        }else if error!.code == 17009 {
+                            self.validation.displayAlert(type: "pass_invalid", completion: {result in})
+                        }
+                    }else{
+                        print("\(user?.displayName) has been logged in")
+                        self.loginAccepted()
+                    }
+                }
             }
         }else{
-            validation.displayAlert(type: "offline")
+            validation.displayAlert(type: "offline", completion: {result in})
         }
     }
     
@@ -103,6 +118,29 @@ class LoginViewController: UIViewController, FBSDKLoginButtonDelegate {
     
     //------------------------------------------------------------------------------------------------------
 
+    // Google Login methods ------------------------------------------------------------------------------
+    func signIn(signIn: GIDSignIn!, didSignInForUser user: GIDGoogleUser!, withError error: NSError?) {
+        if let error = error {
+            print("\(self.CLASSID):   \(error.localizedDescription)")
+            if error.localizedDescription == "access_denied"{
+//                validation.displayAlert("Signup Failed", message: "We need to access the listed information form google to create your unique account. Please try again")
+            }
+            return
+        }
+        
+        if !Reachability.isConnectedToNetwork(){
+//            validation.displayAlert(type: "offline")
+        }else{
+            if user.authentication != nil{
+                let authentication = user.authentication
+                let credential = FIRGoogleAuthProvider.credentialWithIDToken(authentication.idToken,
+                                                                             accessToken: authentication.accessToken)
+                self.firebaseAuth(credential)
+            }
+        }
+    }
+    
+    //------------------------------------------------------------------------------------------------------
     
     // Facebook Login methods ------------------------------------------------------------------------------
     // This is invoked when facebook authenticates
@@ -115,7 +153,7 @@ class LoginViewController: UIViewController, FBSDKLoginButtonDelegate {
         // Checks if the email permission was granted, if not, an account can not be created and an alert is sent out
         
         if !Reachability.isConnectedToNetwork(){
-            validation.displayAlert(type: "offline")
+//            validation.displayAlert(type: "offline")
         }else{
             if result.token != nil{
                 if result.grantedPermissions.contains("email"){
@@ -124,7 +162,7 @@ class LoginViewController: UIViewController, FBSDKLoginButtonDelegate {
                 }else{
                     let loginManager = FBSDKLoginManager()
                     loginManager.logOut()
-                    validation.displayAlert("Signup Failed", message: "We need your email to create your unique account.  Please try again")
+//                    validation.displayAlert("Signup Failed", message: "We need your email to create your unique account.  Please try again")
                 }
             }
         }

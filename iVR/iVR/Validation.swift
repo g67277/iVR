@@ -17,7 +17,7 @@ public class Validation {
         if input.characters.count > check {
             return true
         }else{
-            displayAlert(title, message: message)
+            displayAlert(title, message: message, completion: {result in})
             return false
         }
         
@@ -28,7 +28,7 @@ public class Validation {
         if NSPredicate(format: "SELF MATCHES %@", emailRegex).evaluateWithObject(candidate){
             return true
         }else {
-            displayAlert("Invalid Email ", message: "Please enter a valid email")
+            displayAlert(type: "email_invalid", completion: {result in })
             return false
         }
         
@@ -41,18 +41,18 @@ public class Validation {
             if pass == cpass{
                 return true
             }else{
-                displayAlert("Password Error", message: "Password does not match")
+                displayAlert("Password Error", message: "Password does not match", completion: {result in})
                 return false
             }
             
         }else{
-            displayAlert("Password Error", message: "Password needs to be at least 6 characters")
+            displayAlert("Password Error", message: "Password needs to be at least 6 characters", completion: {result in})
             return false
         }
         
     }
     
-    func displayAlert( title: String = "", message: String = "", type: String = ""){
+    func displayAlert( title: String = "", message: String = "", type: String = "", cancelAction: Bool = false, completion: Bool -> () ){
         
         let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
         var mTitle = title
@@ -62,24 +62,58 @@ public class Validation {
         case "offline": // Network error
             mTitle = "Offline"
             mMessage = "You're currently offline, please try again when connected"
+        case "email_invalid":
+            mTitle = "Not Valid"
+            mMessage = "Please enter a valid email address"
+        case "does_not_exist":
+            mTitle = "Doesn't exist"
+            mMessage = "The email you entered doesn't exist, please check the email and try again"
+        case "pass_invalid":
+            mTitle = "Wrong password"
+            mMessage = "Password is not correct, please try again"
         default: break
             
         }
         
         let alert = UIAlertController(title: mTitle, message: mMessage, preferredStyle: UIAlertControllerStyle.Alert)
-        alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default, handler: nil))
-        appDelegate.window?.rootViewController!.presentViewController(alert, animated: true, completion: nil)
+        
+        
+        alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default){ UIAlertAction in
+            completion(true)
+            })
+        
+        
+        if cancelAction {
+            alert.addAction(UIAlertAction(title: "Cancel", style: UIAlertActionStyle.Default){ UIAlertAction in
+                completion(false)
+                })
+        }
+        
+        dispatch_async(dispatch_get_main_queue(), {
+            appDelegate.window?.currentViewController()!.presentViewController(alert, animated: true, completion: nil)
+        })
+        
         
     }
     
-//     func displayAlert(title: String, message: String){
-//        
-//        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
-//        
-//        let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertControllerStyle.Alert)
-//        alert.addAction(UIAlertAction(title: "Click", style: UIAlertActionStyle.Default, handler: nil))
-//        appDelegate.window?.rootViewController!.presentViewController(alert, animated: true, completion: nil)
-//
-//    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
 }

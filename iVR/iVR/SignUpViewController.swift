@@ -33,16 +33,18 @@ class SignUpViewController: UIViewController {
     internal func emailSignUp(){
         
         if Reachability.isConnectedToNetwork(){
-            FIRAuth.auth()?.createUserWithEmail(emailField.text!, password: passField.text!) { (user, error) in
-                if error != nil {
-                    print("\(self.CLASSID):   \(error?.localizedDescription)")
-                }else{
-                    print("\(user?.displayName) has been logged in")
-                    self.signUpAccepted()
+            if self.validation.validateEmail(emailField.text!) {
+                FIRAuth.auth()?.createUserWithEmail(emailField.text!, password: passField.text!) { (user, error) in
+                    if error != nil {
+                        print("\(self.CLASSID):   \(error?.localizedDescription)")
+                    }else{
+                        print("\(user?.displayName) has been logged in")
+                        self.signUpAccepted()
+                    }
                 }
             }
         }else{
-            validation.displayAlert(type: "offline")
+            self.validation.displayAlert(type: "offline", completion: {result in})
         }
     }
     
